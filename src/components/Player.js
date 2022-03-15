@@ -40,7 +40,7 @@ const Player = ({currentSong,setCurrentSong,isPlaying,setIsPlaying,audioRef,song
     else{
       const index = currentIndex-1 >=0?currentIndex-1:songs.length-1;
      await setCurrentSong(songs[index]);
-     activeLibraryHandler(songs[index]);
+     activeLibraryHandler(songs[index],songs,setSongs);
     }
     playAudio(isPlaying,audioRef);
   }
